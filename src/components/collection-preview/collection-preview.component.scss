@@ -3,22 +3,30 @@
     display:flex;
     justify-content: space-between;
     align-items: center;
+    margin: 5% 0;
     
     .item {
         width: 23%;
         height: 440px;
+        overflow: hidden;
         
         .image{
             width: 100%;
-            height: 95%;
+            height: 92%;
             background-size: cover;
             background-position: center;
         }
         .info{
-            height: 5%;
+            height: 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            h2{
+                font-size: 20px;
+            }
+        }
+        &:hover {
+            cursor: pointer;
         }
     }
 }
