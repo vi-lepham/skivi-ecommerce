@@ -1,0 +1,24 @@
+
+.preview{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    .item {
+        width: 23%;
+        height: 440px;
+        
+        .image{
+            width: 100%;
+            height: 95%;
+            background-size: cover;
+            background-position: center;
+        }
+        .info{
+            height: 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}
