@@ -4,22 +4,9 @@
     justify-content: space-between;
     align-items: center;
     .navigation{
-        min-width: 25%;
+        min-width: 20%;
         display: flex;
         justify-content: space-between;
-        .user {
-            width: 32%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            .user-profile-img{
-                width: 20px;
-                height: 20px;
-                border-radius: 50%;
-                background-position: center;
-                background-size: cover;
-            }
-        }
     }
 }
 

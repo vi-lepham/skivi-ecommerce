@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../assets/original.svg';
+import { ReactComponent as UserLogo } from '../../assets/iconmonstr-user-circle-thin.svg'; 
 import './header.styles.scss';
 
 const Header = ({ currentUser }) => (
@@ -13,16 +14,9 @@ const Header = ({ currentUser }) => (
             <Link to='/contact'>CONTACT</Link>
             {
                 currentUser ?
-                <Link className='user' to='/account'>
-                    <div className='user-profile-img'
-                        style={{
-                            backgroundImage: `url(${currentUser.photoURL})`
-                        }}>
-                    </div>
-                    <div className='user-name'>{currentUser.displayName}</div>
-                </Link>
+                (<Link to='/account'> <UserLogo /> </Link>)
                 :
-                <Link to='/signinsignup'> SIGN IN </Link>
+                (<Link to='/signinsignup'> SIGN IN </Link>)
             }
         </div>
     </div>
