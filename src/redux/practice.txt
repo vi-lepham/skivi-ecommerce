@@ -1,0 +1,109 @@
+//rootReducer
+
+* Purpose: Combine all reducers
+
+import { combineReducers } from 'redux';
+
+import userReducer from './user/user.reducer.js'
+
+export default combineReducers({
+    user: userReducer
+})
+
+//user
+//userReducer
+
+* Purpose: Same as this.state and this.setState
+
+const INITIAL_STATE = {
+    currentUser: null
+}
+
+const userReducer = (state = INITIAL_STATE, action) => {
+    switch (action.type) {
+        case 'SET_CURRENT_USER':
+            return ({
+                ...state,
+                currentUser: action.payload
+            });
+        default:
+            return state;
+    }
+}
+
+export default userReducer;
+
+//userAction
+
+export const setCurrentUser = user => {
+    type: 'SET_CURRENT_USER',
+    payload: user
+}
+
+//store
+
+* Purpose: Connect the rootReducer to the App/DOM
+
+import { createStore, applyMiddleware } from 'redux';
+import logger from 'redux-logger'; // logger has a purpose of logging out all the middlewares (between actions and reducer) 
+
+import rootReducer from './root-reducer.js'
+
+const middlewares = [logger];
+
+const store = createStore(rootReducer, applyMiddleware(...middlewares));
+
+_______________________________________________________________________________________________
+
+//rootReducer
+
+import { combineReducers } from 'redux';
+
+import userReducer from './user/user.reducer.js';
+
+export default combineReducers({
+    user: userReducer
+})
+
+** rootReducer do not need direct export
+
+//userReducer
+
+const INITIAL_STATE = {
+    currentUser: null
+}
+
+const userReducer = (state = INITIAL_STATE, action) => {
+    switch (action.type) {
+        case 'SET_CURRENT_USER':
+            return ({
+                ...state,
+                currentUser: action.payload
+            });
+        default:
+            return state;
+    }
+}
+
+export default userReducer;
+
+//userAction
+
+export const setCurrentUser = user => {
+    type: 'SET_CURRENT_USER',
+    payload: user
+}
+
+//store
+
+import { createStore, applyMiddleware } from 'redux';
+import logger from 'redux-logger';
+
+import rootReducer from './root-reducer.js';
+
+const middlewares = [logger];
+
+const store = createStore(rootReducer, applyMiddleware(...middlewares));
+
+export default store;
+
