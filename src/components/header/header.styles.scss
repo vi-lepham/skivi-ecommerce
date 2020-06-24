@@ -3,8 +3,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
     .navigation{
-        min-width: 20%;
+        .left-nav {
+            width: 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;

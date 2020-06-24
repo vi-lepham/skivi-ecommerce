@@ -1,7 +1,10 @@
 import React from 'react';
+
+import CollectionItem from '../collection-item/collection-item.component';
+
 import './collection-preview.component.scss';
 
-const CollectionPreview = ({ title, items }) => (
+const CollectionPreview = ({ title, routeName, items }) => (
     <div className='collection'>
         <div className='title'>
             <h1>{title.toUpperCase()}</h1>  
@@ -10,17 +13,7 @@ const CollectionPreview = ({ title, items }) => (
         <div className='preview'>
             {items.filter((item, idx) => idx < 4)
                 .map(item => (
-                <div key='{item.id}' className='item'>
-                    <div className='image'
-                        style={{
-                            backgroundImage: `url(${item.imageUrl})`
-                        }}
-                    ></div>
-                    <div className='info'>
-                        <h2 className='name'>{item.name}</h2>
-                        <p className='price'>${item.price}</p>
-                    </div>
-                </div>
+                <CollectionItem key={item.id} item={item} />
             ))}
         </div>
     </div>

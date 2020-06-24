@@ -41,11 +41,6 @@ class SignIn extends React.Component {
     render(){
         return(
             <div className='signin'>
-                <div className='external-signin'>
-                    <h2>Sign in with</h2>
-                    <GoogleLogo className='login-logo' onClick={signInWithGoogle}/> 
-                </div>
-                <h2>OR</h2>
                 <div className='email-signin'>
                     <h2>Sign in with your email and password</h2>
                     <form onSubmit={this.handleSubmit}>
@@ -71,6 +66,16 @@ class SignIn extends React.Component {
                         </div>
                     </form>
                 </div>
+                <h2>OR</h2>
+                <div className='external-signin'>
+                    <h2>Sign in with</h2>
+                    <CustomButton className='external-signin-btn'>
+                        <GoogleLogo className='login-logo' onClick={signInWithGoogle}/> 
+                        <span>Google</span>
+                    </CustomButton>
+                </div>
+                
+                
             </div>
         )
     }

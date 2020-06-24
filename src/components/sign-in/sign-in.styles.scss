@@ -3,14 +3,39 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin: 3% auto;
+    margin: 5% auto;
+    border: rgb(151, 151, 151) solid 0.5px;
+    border-radius: 5%;
+    padding: 5%;
+    .email-signin {
+        margin-bottom: 15%;
+    }
+    .external-signin {
+        margin-top: 10%;
+        button {
+            background-color: white;
+            border: 0.7px solid black;
+            color: black;
+            margin: 5% auto;
+        }
+    }
 }
 
+h2 {
+    font-size: 30px;
+}
 .login-btn {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .login-logo {
-        cursor: pointer;
-    }
+}
+
+.login-logo {
+    cursor: pointer;
+}
+
+.external-signin-btn {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }

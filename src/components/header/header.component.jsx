@@ -8,28 +8,34 @@ import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 
 import './header.styles.scss';
 
-const Header = ({ currentUser }) => (
+const Header = ({ currentUser, hidden }) => (
     <div className='header'>
-        <Link to='/'>
+        <Link className='logo' to='/'>
             <h1>Skivi</h1>
         </Link>
         <div className='navigation'>
-            <Link to='/shop'>SHOP</Link>
-            <Link to='/contact'>CONTACT</Link>
-            {
-                currentUser ?
-                (<Link to='/account'> <UserIcon className='user-icon' /> </Link>)
-                :
-                (<Link to='/signinsignup'> SIGN IN </Link>)
-            }
-            <CartIcon />
+            <div className='left-nav'>
+                <Link to='/shop'>SHOP</Link>
+                {
+                    currentUser ?
+                    (<Link to='/account'> <UserIcon className='user-icon' /> </Link>)
+                    :
+                    (<Link to='/signin'> SIGN IN </Link>)
+                }
+            </div>
+            <div className='right-nav'>
+                <CartIcon />
+            </div>
         </div>
-        <CartDropdown />
+        {
+            hidden ? null : <CartDropdown />
+        }
     </div>
 )
 
-const mapStateToProps = state => ({
-    currentUser: state.user.currentUser
+const mapStateToProps = ({user: {currentUser}, cart: {hidden}}) => ({
+    currentUser,
+    hidden
 })
 
 export default connect(mapStateToProps)(Header);
