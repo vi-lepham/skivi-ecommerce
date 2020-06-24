@@ -16,14 +16,14 @@ const Header = ({ currentUser, hidden }) => (
         <div className='navigation'>
             <div className='left-nav'>
                 <Link to='/shop'>SHOP</Link>
+            </div>
+            <div className='right-nav'>
                 {
                     currentUser ?
                     (<Link to='/account'> <UserIcon className='user-icon' /> </Link>)
                     :
                     (<Link to='/signin'> SIGN IN </Link>)
                 }
-            </div>
-            <div className='right-nav'>
                 <CartIcon />
             </div>
         </div>
