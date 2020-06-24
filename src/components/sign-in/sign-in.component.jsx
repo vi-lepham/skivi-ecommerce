@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-btn/custom-btn.component';
-import { ReactComponent as GoogleLogo } from '../../assets/icons8-google.svg';
+
+import { ReactComponent as GoogleLogo } from '../../assets/google.svg';
 import { auth, signInWithGoogle } from '../../firebase/firebase.utils';
 
 import './sign-in.styles.scss';
@@ -38,10 +40,14 @@ class SignIn extends React.Component {
     }
     render(){
         return(
-            <div className='signin-signup'>
-                <div className='signin'>
-                    <h2>I already have an account</h2>
-                    <p>Sign in with your email and password</p>
+            <div className='signin'>
+                <div className='external-signin'>
+                    <h2>Sign in with</h2>
+                    <GoogleLogo className='login-logo' onClick={signInWithGoogle}/> 
+                </div>
+                <h2>OR</h2>
+                <div className='email-signin'>
+                    <h2>Sign in with your email and password</h2>
                     <form onSubmit={this.handleSubmit}>
                         <FormInput 
                             name='email'
@@ -61,7 +67,7 @@ class SignIn extends React.Component {
                         />
                         <div className='login-btn'>
                             <CustomButton type='submit'> <p>Sign In</p> </CustomButton>
-                            <GoogleLogo className='login-logo' onClick={signInWithGoogle}/> 
+                            <Link to='/signup'> New To Skivi?</Link> 
                         </div>
                     </form>
                 </div>
