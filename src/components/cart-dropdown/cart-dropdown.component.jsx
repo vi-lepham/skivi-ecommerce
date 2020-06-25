@@ -8,10 +8,11 @@ import CartItem from '../cart-item/cart-item.component';
 
 import { selectCartItems } from '../../redux/cart/cart.selectors';
 import { selectCartItemsQuantity } from '../../redux/cart/cart.selectors';
+import { toggleCartHidden } from '../../redux/cart/cart.actions';
 
 import './cart-dropdown.styles.scss';
 
-const CartDropdown = ({ cartItems, itemCount, history }) => (
+const CartDropdown = ({ cartItems, itemCount, history, dispatch }) => (
     <div className='cart-dropdown'>
     <h3>My Cart { itemCount > 1 ? (<span>{itemCount} items</span>) : (<span>{itemCount} item</span>)}</h3>
     {
@@ -22,12 +23,18 @@ const CartDropdown = ({ cartItems, itemCount, history }) => (
                 (<CartItem key={cartItem.id} item={cartItem} />)
                 )}
             </div>
-            <CustomButton className='checkout-btn' onClick={() => history.push('/checkout')}> GO TO CHECKOUT </CustomButton>
+            <CustomButton className='checkout-btn' 
+                onClick={() => {
+                    history.push('/checkout');
+                    dispatch(toggleCartHidden())}}> GO TO CHECKOUT </CustomButton>
         </div>
         )
         : (<div>
             <div className='empty-message'>Your cart is empty</div>
-            <CustomButton className='shop-btn' onClick={() => history.push('/shop')}> SHOP NOW </CustomButton>
+            <CustomButton className='shop-btn' 
+                onClick={() => {
+                    history.push('/shop');
+                    dispatch(toggleCartHidden())}}> SHOP NOW </CustomButton>
         </div>)
     }
     </div>

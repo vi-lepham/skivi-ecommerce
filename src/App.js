@@ -10,6 +10,7 @@ import SignInPage from './pages/signinpage/signinpage.component';
 import SignUpPage from './pages/signuppage/signuppage.component';
 import AccountPage from './pages/accountpage/accountpage.component';
 import CheckOutPage from './pages/checkoutpage/checkoutpage.component';
+import ItemPage from './pages/itempage/itempage.component';
 
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 import { setCurrentUser } from './redux/user/user.actions';
@@ -56,6 +57,7 @@ class App extends React.Component {
             <Route path='/signup' component={SignUpPage} />
             <Route path='/account' component={AccountPage} />
             <Route path='/checkout' component={CheckOutPage} />
+            <Route path='/item' component={ItemPage} />
           </Switch>
       </div>
     );

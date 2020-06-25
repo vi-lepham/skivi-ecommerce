@@ -4,23 +4,38 @@
     align-items: center;
     height: auto;
     margin: 5% 0;
+    padding-bottom: 5%;
+    border-bottom: 0.5px solid grey;
   
-    img {
-      width: 25%;
+    .image-container {
+        width: 20%;
+        object-fit: cover;
+        img{
+            width: 100%;
+        }
     }
   
     .item-details {
       width: 75%;
       display: flex;
       justify-content: space-between;
-      padding: 10px 20px;
+      margin-left: 7%;
+      font-size: 17px;
   
       .price{
-        font-size: 18px;
         font-weight: bold;
       }
-      .name {
-        font-size: 20px;
+      .quantity-change {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .quantity {
+              margin: 0 10px;
+          }
+          .arrow {
+              font-size: 20px;
+              cursor: pointer;
+          }
       }
       .remove-button {
         cursor: pointer;
