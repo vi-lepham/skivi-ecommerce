@@ -1,0 +1,16 @@
+.checkout-page {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5vh;
+    .item-block {
+        flex: 2;
+        border: 0.5px solid grey;
+        margin-right: 5%;
+        padding: 2%;
+    }
+    .total-block{
+        flex: 1;
+        padding: 2%;
+    }
+}
