@@ -1,0 +1,25 @@
+.collection {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    h1 {
+        font-size: 40px;
+        margin-bottom: 5%;
+    }
+  
+    .items {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 10px;
+  
+      & .collection-item {
+        margin-bottom: 30px;
+      }
+    }
+
+    p {
+        cursor: pointer;
+        margin-top: auto;
+    }
+  }
