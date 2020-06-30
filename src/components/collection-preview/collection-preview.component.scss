@@ -5,17 +5,19 @@
             font-size: 40px;
             border-bottom: 3px solid rgb(255, 238, 0);
             width: fit-content;
+            height: auto;
             margin-left: 50%;
             transform: translateX(-50%);
         }
         .see-more {
             cursor: pointer;
+            text-transform: uppercase;
         }
     }
     .preview{
         display:flex;
         justify-content: space-between;
         align-items: center;
-        margin: 5%;
+        flex-wrap: wrap;
     }
 }

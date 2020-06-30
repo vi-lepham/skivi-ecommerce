@@ -1,6 +1,6 @@
 .menu-item {
     min-width: 250px;
-    height: 40vh;
+    height: 60vh;
     flex: 1 1 auto;
     display: flex;
     align-items: center;
@@ -24,7 +24,7 @@
   
     &.large {
       min-width: 450px;
-      height: 70vh;
+      height: 100vh;
       margin-bottom: 10vh;
     }
   

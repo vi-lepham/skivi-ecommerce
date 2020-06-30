@@ -12,7 +12,7 @@ const CollectionPreview = ({ title, items , history }) => (
             <p className='see-more'
                 onClick={() => history.push(`/shop/${title.toLowerCase()}`)}
             >
-            See more
+            See more &#8594;
             </p>      
         </div>
         <div className='preview'>

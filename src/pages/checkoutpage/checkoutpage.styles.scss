@@ -1,16 +1,25 @@
 .checkout-page {
-    width: 65%;
+    width: 75%;
+    height: auto;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     margin-top: 5vh;
     .item-block {
-        width: 75%;
-        margin-right: 5%;
+        width: 70%;
         padding: 2%;
     }
     .total-block{
-        width: 25%;
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0; 
+        width: 30%;
+        height: fit-content;
         padding: 2%;
+        .test-warning {
+            margin: 5% 0;
+            font-size: 17px;
+            color: red;
+          }
     }
 }

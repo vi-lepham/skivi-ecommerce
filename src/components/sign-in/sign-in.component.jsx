@@ -62,7 +62,7 @@ class SignIn extends React.Component {
                         />
                         <div className='login-btn'>
                             <CustomButton type='submit'> <p>Sign In</p> </CustomButton>
-                            <Link to='/signup'> New To Skivi?</Link> 
+                            <Link to='/signup'> New To Skivi? Sign Up Now</Link> 
                         </div>
                     </form>
                 </div>

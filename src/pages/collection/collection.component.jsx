@@ -18,7 +18,7 @@ const Collection = ({ collection, history }) => {
             items.map(item => <CollectionItem key={item.id} item={item} />)
         }
         </div>
-        <p onClick={() => history.push('/shop')}>Other Categories</p>
+        <p onClick={() => history.push('/shop')} className='other-categories'>Other Categories &#8594;</p>
     </div>
 )}
 
