@@ -15,7 +15,7 @@ const Collection = ({ collection, history }) => {
         <h1>{title}</h1>
         <div className='items'>
         {
-            items.map(item => <CollectionItem className='collection-item' key={item.id} item={item} />)
+            items.map(item => <CollectionItem key={item.id} item={item} />)
         }
         </div>
         <p onClick={() => history.push('/shop')}>Other Categories</p>

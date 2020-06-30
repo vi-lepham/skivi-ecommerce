@@ -4,12 +4,11 @@
     box-sizing: border-box;
 }
 
-body {
+.App {
+    position: relative;
     max-width: 100%;
-    padding: 2%;
     font-family: 'Jost';
 }
-
 a {
     text-decoration: none;
     color: inherit;

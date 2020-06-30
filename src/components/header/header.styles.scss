@@ -1,17 +1,28 @@
 .header {
     width: 100%;
+    padding: 1%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
     border-bottom: 0.5px solid rgb(189, 189, 189);
-    padding-bottom: 1%;
+    font-size: 13px;
     .logo {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
     }
     .navigation{
+        .left-nav {
+            width: 20%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .categories-nav {
+                cursor: pointer;
+                text-transform: capitalize;
+            }
+        }
         .right-nav {
             width: 10%;
             display: flex;

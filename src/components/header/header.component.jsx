@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
@@ -7,19 +7,24 @@ import { ReactComponent as UserIcon } from '../../assets/user.svg';
 import CartIcon from '../cart-icon/cart-icon.component';
 import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 
+import { selectDirectorySection } from '../../redux/directory/directory.selectors';
 import { selectCurrentUser } from '../../redux/user/user.selectors';
 import { selectCartHidden } from '../../redux/cart/cart.selectors';
 
 import './header.styles.scss';
 
-const Header = ({ currentUser, hidden }) => (
+const Header = ({ currentUser, hidden, sections, history }) => (
     <div className='header'>
         <Link className='logo' to='/'>
             <h1>Skivi</h1>
         </Link>
         <div className='navigation'>
             <div className='left-nav'>
-                <Link to='/shop'>SHOP</Link>
+                {
+                    sections.map( ({ title, pageUrl }) => (
+                        <div className='categories-nav' onClick={() => history.push(`${pageUrl}`)}>{title}</div>
+                    ))
+                }
             </div>
             <div className='right-nav'>
                 {
@@ -39,7 +44,8 @@ const Header = ({ currentUser, hidden }) => (
 
 const mapStateToProps = createStructuredSelector({
     currentUser: selectCurrentUser,
-    hidden: selectCartHidden
+    hidden: selectCartHidden,
+    sections: selectDirectorySection
 })
 
-export default connect(mapStateToProps)(Header);
+export default withRouter(connect(mapStateToProps)(Header));

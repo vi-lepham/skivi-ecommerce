@@ -1,10 +1,12 @@
-
 .collection {
     margin-bottom: 10%;
     .title {
-        text-align: center;
         h1 {
             font-size: 40px;
+            border-bottom: 3px solid rgb(255, 238, 0);
+            width: fit-content;
+            margin-left: 50%;
+            transform: translateX(-50%);
         }
         .see-more {
             cursor: pointer;
@@ -14,6 +16,6 @@
         display:flex;
         justify-content: space-between;
         align-items: center;
-        margin: 5% 0;
+        margin: 5%;
     }
 }
