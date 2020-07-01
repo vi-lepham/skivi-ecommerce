@@ -1,13 +1,13 @@
 .menu-item {
-    min-width: 250px;
+    min-width: 340px;
     height: 60vh;
-    flex: 1 1 auto;
+    
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     
-    margin: 0 20px 15px;
+    margin: 0 10px 15px;
     overflow: hidden;
   
     &:hover {
@@ -24,9 +24,9 @@
     }
   
     &.large {
-      min-width: 450px;
+      min-width: 520px;
       height: 100vh;
-      margin-bottom: 10vh;
+      margin-bottom: 5vh;
     }
   
     &:first-child {

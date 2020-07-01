@@ -15,7 +15,7 @@ const Landing = ({ history }) => (
                 <img src={HeroImage} alt='Hero'></img>
             </div>
             <div className='hero-text'>
-                <h1>FREE SHIPPING FOR NEW COLLECTION</h1>
+                <h1>FREE SHIPPING FIRST ORDER</h1>
                 <CustomButton onClick={() => history.push('/shop')}>Shop Now</CustomButton>
             </div>
         </div>
