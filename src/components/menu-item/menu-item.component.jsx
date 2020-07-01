@@ -14,9 +14,8 @@ const MenuItem = ({ title, imageUrl, size, history, pageUrl}) => (
         backgroundImage: `url(${imageUrl})`
       }}
     />
-    <div className='content'>
-      <h1 className='title'>{title.toUpperCase()}</h1>
-    </div>
+    <div className='background-cover'></div>
+    <h1 className='title'>{title.toUpperCase()}</h1>
   </div>
 );
 
