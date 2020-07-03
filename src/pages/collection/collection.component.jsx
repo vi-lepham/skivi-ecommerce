@@ -22,8 +22,11 @@ const Collection = ({ collection, history }) => {
     </div>
 )}
 
-const mapStateToProps = (state, ownProps) => ({
-    collection: selectCollection(ownProps.match.params.collectionId)(state)
-})
+const mapStateToProps = (state, ownProps) => {
+    const collectionId = ownProps.match.params.collectionId;
+    return {
+    collection: selectCollection(collectionId)(state)
+}
+}
 
 export default withRouter(connect(mapStateToProps)(Collection));

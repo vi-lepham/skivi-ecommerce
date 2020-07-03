@@ -12,8 +12,12 @@ export const selectCollectionsForPreview = createSelector(
     collections => collections ? Object.keys(collections).map(key => collections[key]) : []
 )
 
-export const selectCollection = collectionUrlParam => 
-    createSelector(
+export const selectCollection = collectionUrlParam => createSelector(
     [selectCollections],
     collections => collections ? (collections[collectionUrlParam]) : null
-    )
+)
+
+export const selectIsCollectionLoaded = createSelector(
+    [selectShop],
+    shop => !!shop.collections
+)

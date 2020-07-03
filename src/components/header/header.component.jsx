@@ -21,8 +21,8 @@ const Header = ({ currentUser, hidden, sections, history }) => (
         <div className='navigation'>
             <div className='left-nav'>
                 {
-                    sections.map( ({ title, pageUrl }) => (
-                        <div className='categories-nav' onClick={() => history.push(`${pageUrl}`)}>{title}</div>
+                    sections.map( ({ id, title, pageUrl }) => (
+                        <div key={id} className='categories-nav' onClick={() => history.push(`${pageUrl}`)}>{title}</div>
                     ))
                 }
             </div>
