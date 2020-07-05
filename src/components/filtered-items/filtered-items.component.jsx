@@ -7,6 +7,7 @@ import './filtered-items.styles.scss';
 const FilteredItems = ({ items, keyword }) => {
     if (keyword !== '') {
         const searchResults = items.filter(item => item.name.toLowerCase().includes(keyword.toLowerCase()))
+        
         return (
             <div className='filtered-items'>
                 {
