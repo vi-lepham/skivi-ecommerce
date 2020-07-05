@@ -5,7 +5,7 @@ import CollectionItem from '../collection-item/collection-item.component';
 
 import './collection-preview.component.scss';
 
-const CollectionPreview = ({ title, items , history }) => (
+const CollectionPreview = ({ title, items, history }) => (
     <div className='collection'>
         <div className='title'>
             <h1>{title.toUpperCase()}</h1>  
@@ -24,5 +24,6 @@ const CollectionPreview = ({ title, items , history }) => (
         </div>
     </div>
 )
+
 
 export default withRouter(CollectionPreview);

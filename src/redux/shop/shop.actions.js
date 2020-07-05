@@ -28,4 +28,4 @@ export const fetchCollectionsAsync = () => {
             })
             .catch(err => dispatch(fetchCollectionsFailure(err)))
     }  
-}
+} 

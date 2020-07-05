@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { compose } from 'redux';
 import { withRouter } from 'react-router-dom';
 
 import { selectCollection } from '../../redux/shop/shop.selectors';
@@ -25,8 +26,11 @@ const Collection = ({ collection, history }) => {
 const mapStateToProps = (state, ownProps) => {
     const collectionId = ownProps.match.params.collectionId;
     return {
-    collection: selectCollection(collectionId)(state)
-}
+        collection: selectCollection(collectionId)(state)
+    }
 }
 
-export default withRouter(connect(mapStateToProps)(Collection));
+export default compose(
+    withRouter,
+    connect(mapStateToProps)
+)(Collection);

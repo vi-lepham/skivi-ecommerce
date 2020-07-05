@@ -3,7 +3,8 @@ import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
-import { ReactComponent as UserIcon } from '../../assets/user.svg'; 
+import { ReactComponent as UserIcon } from '../../assets/user.svg';
+import { ReactComponent as SearchIcon } from '../../assets/search.svg'; 
 import CartIcon from '../cart-icon/cart-icon.component';
 import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 
@@ -27,6 +28,7 @@ const Header = ({ currentUser, hidden, sections, history }) => (
                 }
             </div>
             <div className='right-nav'>
+                <SearchIcon className='search-icon' onClick={() => history.push('/search')} />
                 {
                     currentUser ?
                     (<Link to='/account'> <UserIcon className='user-icon' /> </Link>)

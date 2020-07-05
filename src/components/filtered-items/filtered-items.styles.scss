@@ -1,0 +1,13 @@
+.filtered-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: fit-content;
+    margin: 0 auto;
+    .collection-item {
+        min-width: 350px;
+        height: 70vh;
+        padding: 0 2.5%;
+    }
+}
