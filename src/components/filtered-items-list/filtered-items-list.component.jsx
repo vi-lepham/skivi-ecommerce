@@ -9,11 +9,13 @@ import FilteredItems from '../filtered-items/filtered-items.component';
 const FilteredItemsList = ({ collections, keyword }) => {
     return (
         <div className='filtered-items-list'>
-           {
-               collections.map(({ id, ...otherCollectionProps}) => (
-                   <FilteredItems key={id} {...otherCollectionProps} keyword={keyword} />
-               ))
-           }
+            <div className='filtered-items'>
+                {
+                    collections.map(({ id, ...otherCollectionProps}) => (
+                        <FilteredItems key={id} {...otherCollectionProps} keyword={keyword} />
+                    ))
+                }
+            </div>
         </div>
     )
 }
