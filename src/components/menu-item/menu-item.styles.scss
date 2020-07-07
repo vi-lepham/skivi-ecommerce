@@ -1,7 +1,13 @@
+@mixin mobile {
+    @media (max-width: 400px) {
+        @content;
+    }
+}
+
 .menu-item {
-    min-width: 340px;
+    min-width: 300px;
     height: 60vh;
-    
+    flex: 1 1 auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,52 +16,67 @@
     margin: 0 10px 15px;
     overflow: hidden;
   
-    &:hover {
-      cursor: pointer;
-  
-      & .background-image {
-        transform: scale(1.1);
-        transition: transform 2s cubic-bezier(0.25, 0.45, 0.45, 0.95);
-      }
-  
-      & .content {
-        opacity: 0.9;
-      }
+    &:hover, &:focus, &:active {
+        cursor: pointer;
+    
+        & .background-image {
+          transform: scale(1.1);
+          transition: transform 2s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+        }
+    
+        & .content {
+          opacity: 0.9;
+        }
     }
   
     &.large {
-      min-width: 520px;
-      height: 100vh;
-      margin-bottom: 5vh;
+        height: 100vh;
+        min-width: 500px;
     }
   
     &:first-child {
-      margin-right: 7.5px;
+        margin-right: 7.5px;
     }
   
     &:last-child {
-      margin-left: 7.5px;
+        margin-left: 7.5px;
     }
   
     .background-image {
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-position: center;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
     }
   
     .background-cover {
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      background-color: rgb(206, 175, 0);
-      opacity: 0.5;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background-color: rgb(158, 135, 7);
+        opacity: 0.5;
     }
 
     .title {
-      font-weight: normal;
-      font-size: 50px;
-      color: #ffffff;
-      position: absolute;
+        font-size: 35px;
+        font-style: italic;
+        color: #ffffff;
+        position: absolute;
+        background-color: black;
+        padding: 3% 5%;
     }
   }
+
+@include mobile(){
+    .menu-item{
+        height: 40vh;
+        margin: 0 auto 15px;
+        &.large {
+            height: 40vh;
+            min-width: 300px;
+        }
+        &:last-child {
+            margin-left: 0;
+        }
+    }
+}

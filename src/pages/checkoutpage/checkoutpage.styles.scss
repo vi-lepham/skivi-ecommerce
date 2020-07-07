@@ -5,9 +5,25 @@
     display: flex;
     justify-content: space-between;
     margin-top: 5vh;
+    h2 {
+        border-bottom: grey solid 0.5px;
+    }
     .item-block {
         width: 70%;
         padding: 2%;
+        .empty-cart {
+            margin: 10% auto;
+            width: fit-content;
+            text-align: center;
+            p {
+                color: grey;
+                font-size: 20px;
+                margin-bottom: 10%;
+            }
+            button{
+                width: 250px;
+            }
+        }
     }
     .total-block{
         position: sticky;

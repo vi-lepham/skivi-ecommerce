@@ -1,3 +1,14 @@
+@mixin tablet {
+    @media (max-width: 1100px) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media (max-width: 400px) {
+        @content;
+    }
+}
+
 .header {
     width: 100%;
     padding: 1%;
@@ -14,6 +25,7 @@
         font-size: 15px;
     }
     .navigation{
+        
         .left-nav {
             width: 20%;
             display: flex;
@@ -40,3 +52,34 @@
     }
 }
 
+@include tablet(){
+    .header{
+        .navigation{
+            .left-nav{
+                width: 35%;
+            }
+            .right-nav{
+                width: 20%;
+                
+            }
+        }
+    }
+}
+
+@include mobile(){
+    .header {
+        .logo {
+            left: 5%;
+            transform: translateX(0);
+        }
+        .navigation{
+            .left-nav{
+                width: 0;
+                overflow: hidden;
+            }
+            .right-nav{
+                width: 40%;
+            }
+        }
+    }
+}

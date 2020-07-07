@@ -1,14 +1,14 @@
 .cart-dropdown {
     position: absolute;
-    width: 30%;
-    height: 60vh;
+    width: 400px;
+    height: 520px;
     display: flex;
     flex-direction: column;
     padding: 20px;
     border-radius: 2%;
     border: 0.5px solid rgb(153, 153, 153);
     background-color: white;
-    top: 9vh;
+    top: 70px;
     right: 1%;
     z-index: 5;
     span {

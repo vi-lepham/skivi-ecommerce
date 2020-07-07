@@ -35,7 +35,7 @@ const Header = ({ currentUser, hidden, sections, history }) => (
                     :
                     (<Link to='/signin'> SIGN IN </Link>)
                 }
-                <CartIcon />
+                <CartIcon className='cart-icon' />
             </div>
         </div>
         {
