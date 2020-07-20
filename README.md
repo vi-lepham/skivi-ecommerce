@@ -1,8 +1,8 @@
 # Skivi Ecommerce
 
-A ecommerce app built with React and communicates with Firebase database.
+A ecommerce app built with React and Firebase database.
 
-Learned on build with Complete React Developer in 2020 course by Andrei Neagoie and Yihua Zhang.
+Expanded from the e-commerce project in the Complete React Developer in 2020 course by Andrei Neagoie and Yihua Zhang.
 
 ![Skivi Ecommerce landing page](https://i.ibb.co/PY6xj2x/2020-07-02-2.png)
 
@@ -36,6 +36,6 @@ Check out the [deployed site](https://skivi-clothing.netlify.app).
 
 4. Search for items
 
-## Running locally
+
 
 
