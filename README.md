@@ -55,4 +55,17 @@ Check out the [deployed site](https://skivi-clothing.netlify.app).
 
 ![Collection page](https://i.ibb.co/gmwxMLK/2020-07-22-7.png)
 
+### Checkout page
+
+![Checkout page](https://i.ibb.co/Dgt4bBk/2020-07-22-10.png)
+
+### Sign in and Sign up pages
+
+![Sign in page](https://i.ibb.co/hCh3tWG/2020-07-22-11.png)
+
+![Sign up page](https://i.ibb.co/6Xvybjs/2020-07-22-12.png)
+
+### Search page
+
+![Search page](https://i.ibb.co/v3T15ZZ/2020-07-22-13.png)
 
