@@ -2,7 +2,7 @@
 
 A ecommerce app built with React and Firebase database.
 
-Expanded from the e-commerce project in the Complete React Developer in 2020 course by Andrei Neagoie and Yihua Zhang.
+Expanded from the e-commerce project in the React Developer course by Andrei Neagoie and Yihua Zhang.
 
 ![Skivi Ecommerce landing page](https://i.ibb.co/PY6xj2x/2020-07-02-2.png)
 
@@ -22,7 +22,7 @@ Check out the [deployed site](https://skivi-clothing.netlify.app).
 
 5. Sass - Styling
 
-6. Persist - Persist to Local Storage
+6. Redux-Persist - Persist to Local Storage
 
 7. Stripe - Payment handling (test)
 
@@ -35,7 +35,6 @@ Check out the [deployed site](https://skivi-clothing.netlify.app).
 3. Add/remove cart item
 
 4. Search for items
-
 
 
 
