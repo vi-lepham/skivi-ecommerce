@@ -1,8 +1,8 @@
 import React from 'react';
 
-import CollectionItem from '../collection-item/collection-item.component';
+import CollectionItem from '../collection-item/CollectionItem';
 
-import './filtered-items.styles.scss';
+import './FilteredItems.scss';
 
 const FilteredItems = ({ items, keyword }) => {
     

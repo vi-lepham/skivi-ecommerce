@@ -2,17 +2,17 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
+import { auth } from '../../firebase/firebase.utils';
 
-import { ReactComponent as UserIcon } from '../../assets/user.svg';
 import { ReactComponent as SearchIcon } from '../../assets/search.svg'; 
-import CartIcon from '../cart-icon/cart-icon.component';
-import CartDropdown from '../cart-dropdown/cart-dropdown.component';
+import CartIcon from '../cart-icon/CartIcon';
+import CartDropdown from '../cart-dropdown/CartDropdown';
 
 import { selectDirectorySection } from '../../redux/directory/directory.selectors';
 import { selectCurrentUser } from '../../redux/user/user.selectors';
 import { selectCartHidden } from '../../redux/cart/cart.selectors';
 
-import './header.styles.scss';
+import './Header.scss';
 
 const Header = ({ currentUser, hidden, sections, history }) => (
     <div className='header'>
@@ -31,7 +31,7 @@ const Header = ({ currentUser, hidden, sections, history }) => (
                 <SearchIcon className='search-icon' onClick={() => history.push('/search')} />
                 {
                     currentUser ?
-                    (<Link to='/account'> <UserIcon className='user-icon' /> </Link>)
+                    (<Link to='/' onClick={() => auth.signOut()}>SIGN OUT</Link>)
                     :
                     (<Link to='/signin'> SIGN IN </Link>)
                 }

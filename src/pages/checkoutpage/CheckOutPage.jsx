@@ -3,13 +3,13 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { withRouter } from 'react-router-dom';
 
-import CheckOutItem from '../../components/checkout-item/checkout-item.component';
-import StripeCheckoutButton from '../../components/stripe-button/stripe-button.component';
-import CustomButton from '../../components/custom-btn/custom-btn.component';
+import CheckOutItem from '../../components/checkout-item/CheckOutItem';
+import StripeCheckoutButton from '../../components/stripe-button/StripeButton';
+import CustomButton from '../../components/custom-btn/CustomButton';
 
 import { selectCartItems, selectTotal } from '../../redux/cart/cart.selectors';
 
-import './checkoutpage.styles.scss';
+import './CheckOutPage.scss';
 
 const CheckOutPage = ({ cartItems, total, history }) => (
     <div className='checkout-page'>

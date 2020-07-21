@@ -6,13 +6,13 @@ import { createStructuredSelector } from 'reselect';
 import { fetchCollectionsAsync } from '../../redux/shop/shop.actions';
 import { selectIsCollectionLoaded } from '../../redux/shop/shop.selectors';
 
-import CollectionOverview from '../../components/collection-overview/collection-overview.component';
-import Collection from '../collection/collection.component';
-import WithSpinner from '../../components/with-spinner/with-spinner.component';
+import CollectionsOverview from '../collection-overview/CollectionsOverview';
+import Collection from '../collectionpage/Collection';
+import WithSpinner from '../../components/with-spinner/withSpinner';
  
-import './shoppage.styles.scss';
+import './ShopPage.scss';
 
-const CollectionOverviewWithSpinner = WithSpinner(CollectionOverview);
+const CollectionsOverviewWithSpinner = WithSpinner(CollectionsOverview);
 const CollectionWithSpinner = WithSpinner(Collection);
 
 const ShopPage = ({ match, isCollectionLoaded, fetchCollectionsAsync}) => {
@@ -23,7 +23,7 @@ const ShopPage = ({ match, isCollectionLoaded, fetchCollectionsAsync}) => {
 
     return (
         <div className='shop-page'>
-            <Route exact path={`${match.path}`} render={(props) => <CollectionOverviewWithSpinner isLoading={!isCollectionLoaded} {...props} />} />
+            <Route exact path={`${match.path}`} render={(props) => <CollectionsOverviewWithSpinner isLoading={!isCollectionLoaded} {...props} />} />
             <Route path={`${match.path}/:collectionId`} render={(props) => <CollectionWithSpinner isLoading={!isCollectionLoaded} {...props} />} />
         </div>
     )

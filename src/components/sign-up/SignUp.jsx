@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
-import FormInput from '../form-input/form-input.component';
-import CustomButton from '../custom-btn/custom-btn.component';
+import FormInput from '../form-input/FormInput';
+import CustomButton from '../custom-btn/CustomButton';
 
 import { auth, createUserProfileDocument } from '../../firebase/firebase.utils';
 
-import './sign-up.styles.scss';
+import './SignUp.scss';
 
 const SignUp = () => {
   const [userCredentials, setUserCredentials] = useState({

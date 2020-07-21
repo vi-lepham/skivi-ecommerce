@@ -1,5 +1,6 @@
 import React from 'react';
-import './cart-item.styles.scss';
+
+import './CartItem.scss';
 
 const CartItem = ({ item: { imageUrl, name, price, quantity }}) => (
     <div className='cart-item'>

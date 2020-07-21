@@ -5,11 +5,11 @@ import { createStructuredSelector } from 'reselect';
 import { fetchCollectionsAsync } from '../../redux/shop/shop.actions';
 import { selectIsCollectionLoaded } from '../../redux/shop/shop.selectors';
 
-import FormInput from '../../components/form-input/form-input.component';
-import FilteredItemsList from '../../components/filtered-items-list/filtered-items-list.component';
-import WithSpinner from '../../components/with-spinner/with-spinner.component';
+import FormInput from '../../components/form-input/FormInput';
+import FilteredItemsList from '../../components/filtered-items-list/FilteredItemList';
+import WithSpinner from '../../components/with-spinner/withSpinner';
 
-import './searchpage.styles.scss';
+import './SearchPage.scss';
 
 const FilteredItemsListWithSpinner = WithSpinner(FilteredItemsList);
 

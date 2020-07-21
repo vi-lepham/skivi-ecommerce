@@ -4,7 +4,7 @@ import { createStructuredSelector } from 'reselect';
 
 import { selectCollectionsForPreview } from '../../redux/shop/shop.selectors';
 
-import FilteredItems from '../filtered-items/filtered-items.component';
+import FilteredItems from '../filtered-items/FilteredItems';
 
 const FilteredItemsList = ({ collections, keyword }) => {
     return (

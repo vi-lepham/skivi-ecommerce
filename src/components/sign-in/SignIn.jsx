@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import FormInput from '../form-input/form-input.component';
-import CustomButton from '../custom-btn/custom-btn.component';
+import FormInput from '../form-input/FormInput';
+import CustomButton from '../custom-btn/CustomButton';
 
 import { ReactComponent as GoogleLogo } from '../../assets/google.svg';
 import { auth, signInWithGoogle } from '../../firebase/firebase.utils';
 
-import './sign-in.styles.scss';
+import './SignIn.scss';
 
 const SignIn = () => {
     const [userCredentials, setUserCredentials] = useState({ email: '', password: ''});

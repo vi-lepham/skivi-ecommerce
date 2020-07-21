@@ -3,10 +3,10 @@ import { withRouter } from 'react-router-dom';
 
 import HeroImage from '../../assets/women-s-pink-sweatshirt-and-brown-plaid-skirt-794064.jpg';
 
-import CustomButton from '../custom-btn/custom-btn.component';
-import Directory from '../directory/directory.component';
+import CustomButton from '../custom-btn/CustomButton';
+import Directory from '../directory/Directory';
 
-import './landing.styles.scss';
+import './Landing.scss';
 
 const Landing = ({ history }) => (
     <div className='landing'>

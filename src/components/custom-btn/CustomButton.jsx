@@ -1,5 +1,6 @@
 import React from 'react';
-import './custom-btn.styles.scss';
+
+import './CustomButton.scss';
 
 const CustomButton = ({children, ...otherProps}) => (
     <button className='custom-button' {...otherProps} >

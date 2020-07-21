@@ -1,6 +1,6 @@
 import React from 'react';
-import Landing from '../../components/landing/landing.component';
-import './homepage.styles.scss';
+import Landing from '../../components/landing/Landing';
+import './HomePage.scss';
 
 
 const HomePage = () => (
