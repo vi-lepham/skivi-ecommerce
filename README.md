@@ -4,7 +4,7 @@ A ecommerce app built with React and Firebase database.
 
 Expanded from the e-commerce project in the React Developer course by Andrei Neagoie and Yihua Zhang.
 
-![Skivi Ecommerce landing page](https://i.ibb.co/PY6xj2x/2020-07-02-2.png)
+![Skivi Ecommerce landing page](https://i.ibb.co/3hsVN17/2020-07-22-9.png)
 
 Check out the [deployed site](https://skivi-clothing.netlify.app).
 
@@ -36,5 +36,23 @@ Check out the [deployed site](https://skivi-clothing.netlify.app).
 
 4. Search for items
 
+
+## Sections Walkthrough
+
+### Landing page
+
+![Skivi Ecommerce landing page](https://i.ibb.co/3hsVN17/2020-07-22-9.png)
+
+### Categories directory
+
+![Directory](https://i.ibb.co/vvsV49T/2020-07-22-4.png)
+
+### Categories Preview page
+
+![Preview](https://i.ibb.co/B3SYhCF/2020-07-22-5.png)
+
+### Collection page
+
+![Collection page](https://i.ibb.co/gmwxMLK/2020-07-22-7.png)
 
 
