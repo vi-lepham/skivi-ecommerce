@@ -3,7 +3,7 @@ import 'firebase/firestore';
 import 'firebase/auth';
 
 const config = {
-    apiKey: "AIzaSyDiNjQas5p0j6_hbznoF43Dhtsg7IHeXmI",
+    apiKey: `${process.env.FIREBASE_API_KEY}`,
     authDomain: "skivi-db.firebaseapp.com",
     databaseURL: "https://skivi-db.firebaseio.com",
     projectId: "skivi-db",
