@@ -5,6 +5,7 @@ import { createStructuredSelector } from 'reselect';
 import { auth } from '../../firebase/firebase.utils';
 
 import { ReactComponent as SearchIcon } from '../../assets/search.svg'; 
+import { ReactComponent as HeartIcon } from '../../assets/heart.svg'; 
 import CartIcon from '../cart-icon/CartIcon';
 import CartDropdown from '../cart-dropdown/CartDropdown';
 
@@ -29,6 +30,7 @@ const Header = ({ currentUser, hidden, sections, history }) => (
             </div>
             <div className='right-nav'>
                 <SearchIcon className='search-icon' onClick={() => history.push('/search')} />
+                <HeartIcon className='heart-icon' onClick={() => history.push('/favorites')} />
                 {
                     currentUser ?
                     (<Link to='/' onClick={() => auth.signOut()}>SIGN OUT</Link>)

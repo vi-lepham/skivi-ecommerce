@@ -1,0 +1,10 @@
+.collection-items-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0 10%;
+    .collection-item {
+      min-width: 350px;
+      height: 600px;
+    }
+  }

@@ -37,11 +37,11 @@
             }
         }
         .right-nav {
-            width: 10%;
+            width: 15%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            .search-icon {
+            svg {
                 cursor: pointer;
             }
         }

@@ -7,7 +7,7 @@ import './CollectionPreview.scss';
 
 const CollectionPreview = ({ title, items, history }) => (
     <div className='collection'>
-        <div className='title'>
+        <div className='collection-title'>
             <h1>{title.toUpperCase()}</h1>  
             <p className='see-more'
                 onClick={() => history.push(`/shop/${title.toLowerCase()}`)}

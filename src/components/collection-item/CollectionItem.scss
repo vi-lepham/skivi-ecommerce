@@ -14,6 +14,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+        text-align: center;
         .name {
             margin-top: 5%;
             font-weight: normal;
@@ -24,26 +25,43 @@
         }
     }
 
-    button {
-      width: 80%;
-      opacity: 0.7;
+    .actions {
+      display: none;
+      justify-content: space-around;
+      align-items: center;
+      width: 90%;
       position: absolute;
       top: 70%;
       left: 50%;
       transform: translateX(-50%);
-      display: none;
-      z-index: 1;
+      button {
+        width: 70%;
+        opacity: 0.7;
+        z-index: 1;
+      }
+      svg {
+        z-index: 1;
+        opacity: 0.5;
+        width: 34px;
+        height: 34px;
+        &:hover, &:focus {
+          opacity: 1;
+        }
+      }
     }
   
     &:hover, &:focus, &:active {
       cursor: pointer;
       .image {
-        opacity: 0.8;
+        opacity: 0.5;
       }
   
+      .actions {
+        display: flex;
+      }
       button {
         opacity: 0.85;
-        display: flex;
+        padding: 0;
       }
     }
 }

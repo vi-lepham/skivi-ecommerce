@@ -10,6 +10,7 @@ import SignInPage from './pages/signinpage/SignInPage';
 import SignUpPage from './pages/signuppage/SignUpPage';
 import CheckOutPage from './pages/checkoutpage/CheckOutPage';
 import SearchPage from './pages/searchpage/SearchPage';
+import FavePage from './pages/favepage/FavePage';
 
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 import { setCurrentUser } from './redux/user/user.actions';
@@ -53,6 +54,7 @@ const App = ({ currentUser, setCurrentUser }) => {
           <Route path='/signup' component={SignUpPage} />
           <Route exact path='/checkout' component={CheckOutPage} />
           <Route path='/search' component={SearchPage} />
+          <Route path='/favorites' component={FavePage} />
         </Switch>
     </div>
   );

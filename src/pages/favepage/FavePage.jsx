@@ -4,19 +4,15 @@ import { createStructuredSelector } from 'reselect';
 
 import { selectFaveItems } from '../../redux/favorites/fave.selectors';
 
-import CollectionItem from '../../components/collection-item';
-
-import './FavePage.scss';
+import CollectionItemsList from '../../components/collection-items-list/CollectionItemsList';
 
 const FavePage = ({ fave }) => {
     return (
         <div className="fave-page">
-            <h1>Your Faved Items</h1>
+            <h1 className='title'>Your Faved Items</h1>
             {
                 fave ?
-                (
-                    fave.map(item => <CollectionItem key={item.id} item={item} />)
-                ) : null
+                <CollectionItemsList items={fave} /> : null
             }
         </div>
     );

@@ -3,27 +3,6 @@
     flex-direction: column;
     text-align: center;
 
-    h1 {
-        font-size: 40px;
-        margin-bottom: 2%;
-        border-bottom: 3px solid rgb(255, 238, 0);
-        width: fit-content;
-        height: auto;
-        margin-left: 50%;
-        transform: translateX(-50%);
-    }
-  
-    .items {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-evenly;
-      margin: 0 10%;
-      .collection-item {
-        min-width: 350px;
-        height: 600px;
-      }
-    }
-
     .other-categories {
         cursor: pointer;
         margin-top: auto;
